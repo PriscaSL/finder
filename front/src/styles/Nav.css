@@ -30,12 +30,13 @@ button {
 }
 
 .signin-link {
-    background-color: #C3A9F8;
-    color: white;
+    background-color: #cfcdd6;
+    color: var(--black-color);
 }
 
 .signin-link:hover {
     background-color: rgb(179, 135, 255);
+    color: #fff;
 }
 
 .start-for-free-link {

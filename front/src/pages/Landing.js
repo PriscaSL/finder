@@ -28,7 +28,7 @@ function Landing() {
 			<div className='landing-module'>
 				{ModuleList.map((moduleItem, key) => {
 					return (
-						<div className='module-item'>
+						<div className='module-item' key={key}>
 							<div className='icon' style={{ backgroundColor: moduleItem.background }}>
 								{moduleItem.image}
 							</div>
@@ -42,9 +42,9 @@ function Landing() {
 				<h1>GLISH help users master the English language!</h1>
 				<button onClick={(e) => window.location.href = "/login"}>Get Started For Free</button>
 			</section>
-			<div class="partenaire">
-				<div class="division"></div>
-				<div class="partenaire-list">
+			<div className="partenaire">
+				<div className="division"></div>
+				<div className="partenaire-list">
 					<div><img src={Logo1} alt="partenaire" /></div>
 					<div><img src={Logo2} alt="partenaire" /></div>
 					<div><img src={Logo3} alt="partenaire" /></div>
@@ -52,9 +52,9 @@ function Landing() {
 					<div><img src={Logo1} alt="partenaire" /></div>
 				</div>
 			</div>
-			<div class="testimonials section">
-				<h3 class="title">Testimonials</h3>
-				<p class="sub-title">What People Says</p>
+			<div className="testimonials section">
+				<h3 className="title">Testimonials</h3>
+				<p className="sub-title">What People Says</p>
 				<div className='testimonial'>
 					<div className='image-container'>
 						<img src={arisoa} alt='testimonial' />

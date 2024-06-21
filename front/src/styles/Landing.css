@@ -131,6 +131,7 @@ section {
 .partenaire-list img {
    font-size: 2em;
    width: 200px;
+   opacity: 0.6;
 }
 
 .section {
