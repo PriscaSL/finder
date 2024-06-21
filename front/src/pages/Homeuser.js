@@ -34,12 +34,16 @@ function Homeuser() {
             </div>
             <hr id='lineuser'/>
             <div className='foothomeuser'>
-            <h1 className='letslearn'>Let's learn and practice  <i><ArrowForwardIcon/></i></h1>
+            <span>
+              <h1 className='letslearn'>Let's learn and practice  <i><ArrowForwardIcon/></i></h1>
+              <button id='getstart'>Get Started for Free </button>
+            </span>
             <div className='moduleList'>
                   {ModuleList.map((moduleItem, key)=>{
                       return ( 
                       <ModuleItems 
                           key={key}
+                          bg={moduleItem.background}
                           image={moduleItem.image} 
                           title={moduleItem.tilte}  
                           paragraphe={moduleItem.paragraphe}

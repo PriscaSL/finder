@@ -15,7 +15,7 @@
 
 .welcomtext{
     position: relative;
-    width: 90%;
+    width: 53%;
     height: 30rem;
     border-radius: 25px;
     top:6rem;
@@ -26,9 +26,11 @@
     padding-top: 10rem;
 }
 .welcomtext img {
+    position: relative;
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    left: 50rem;
 }
 #lineuser{
     width: 115rem;
@@ -45,26 +47,49 @@
 .moduleList{
     position: absolute;
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
+    top:10rem;
 }
 
 #eddy{
     position: relative;
-    bottom: 1em;
+    bottom: 1rem;
     font-size: 60px;
     font-weight: 500;
+    left: 40rem;
 }
 
 
 #Beginner{
     position: relative;
-    bottom: 8rem;
+    top: -1rem;
     font-size: 40px;
-    padding-bottom: 1rem;
+    left: 48rem;
+    padding-bottom: 5rem;
 }
 
 #px{
     position: relative;
-    bottom: 11rem;
+    bottom:5rem;
+    left: 51rem;
 }
 
+.letslearn{
+    position: relative;
+    top:4rem;
+}
+
+#getstart{
+    width: 210px;
+    height: 65px;
+    border-radius: 15px;
+    cursor: pointer;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 1rem;
+    margin-left: 100rem;
+    background-color: var(--purple);
+    color: #fff;
+    font-weight:bold;
+}

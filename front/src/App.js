@@ -5,6 +5,7 @@ import Register from './pages/Register';
 import Whyus from './pages/Whyus'; 
 import Services from './pages/Services'; 
 import Homeuser from './pages/Homeuser';
+import Beginner from './pages/Beginner';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/why-us" element={<Whyus />} />
           <Route path="/services" element={<Services />} />
           <Route path="/homeuser" element={<Homeuser />} />
+          <Route path="/beginner" element={<Beginner />} />
         </Routes>
       </div>
     </Router>

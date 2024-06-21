@@ -1,0 +1,48 @@
+.BeginnerParent{
+    display: grid;
+    grid-template-columns: 20% auto;
+}
+
+.haut{
+    padding-top: 5rem;
+    display: flex;
+}
+
+.textcontenu{
+    position: relative;
+    top: 2rem;
+}
+
+#titrebeginner{
+    font-size: 3.5rem;
+}
+
+#txtbeginner{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.Niveau{
+   padding-top:9rem;
+   display: flex;
+   gap: 5rem;
+}
+
+
+#begbtn:hover{
+    width: 180px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: var(--yellow);
+}
+
+.imgbeginner{
+    position: relative;
+    top: 5rem;
+    left: 15rem;
+}
+
+#linebeg{
+    position: absolute;
+    bottom: 21rem;
+}
