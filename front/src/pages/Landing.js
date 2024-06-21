@@ -1,13 +1,15 @@
 import React from 'react'
 import '../styles/Landing.css'
 import imgland from '../assets/hero.png'
-import Navbar from '../components/Navbar'
-	; import ModuleList from '../helpers/ModuleList';
+import Navbar from '../components/Navbar';
+import ModuleList from '../helpers/ModuleList';
 import Footer from '../components/Footer';
 import Logo1 from '../assets/LOGO1.jpg';
 import Logo2 from '../assets/LOGO2.png';
 import Logo3 from '../assets/LOGO3.png';
 import Logo4 from '../assets/LOGO4.jpg';
+import arisoa from '../assets/arisoa.jpg';
+import banner from '../assets/Bannerimg.png';
 
 function Landing() {
 	return (
@@ -36,6 +38,7 @@ function Landing() {
 				})}
 			</div>
 			<section className='presentation'>
+				<img src={banner} alt='banner' />
 				<h1>GLISH help users master the English language!</h1>
 				<button onClick={(e) => window.location.href = "/login"}>Get Started For Free</button>
 			</section>
@@ -53,11 +56,18 @@ function Landing() {
 				<h3 class="title">Testimonials</h3>
 				<p class="sub-title">What People Says</p>
 				<div className='testimonial'>
-					<img src={} alt='testimonial' />
+					<div className='image-container'>
+						<img src={arisoa} alt='testimonial' />
+					</div>
 					<div className='testimonial-content'>
 						<p>“I have been using Glish for a few months now and I have to say that it is the best platform for learning English. The quizzes are fun and engaging and the pronunciation practice has helped me a lot.”</p>
-						<h4>John Doe</h4>
+						<h4>Arisoa RABE</h4>
 					</div>
+				</div>
+				<div className="testimonial-footer">
+					<div className="circle"></div>
+					<div className="circle"></div>
+					<div className="circle"></div>
 				</div>
 			</div>
 			<Footer />

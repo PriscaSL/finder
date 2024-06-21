@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/footer.css';
 import Logo from '../assets/LOGO GLISH NOIR.png';
-
+import Home from '../assets/Home.png';
 
 
 function Footer() {
@@ -14,11 +14,8 @@ function Footer() {
             <div class="footer-row fotter-row-grid footer-title">
                 <div>Usefull Links</div>
                 <div>Contact Us</div>
-                <div>
-                    <div class="show-all">v</div>
-                </div>
+                <div>Whatch Videos</div>
             </div>
-            <div class="division"></div>
             <div class="footer-row fotter-row-grid">
                 <div>
                     <ul>
@@ -36,7 +33,7 @@ function Footer() {
                 </div>
                 <div class="footer-image-container">
                     <button class="btn-play">Play now</button>
-                    <img src="./assets/image/capadrone.webp" alt="footer-image" />
+                    <img src={Home} alt="footer-image" />
                 </div>
             </div>
             <div class="division"></div>

@@ -2,7 +2,7 @@
 /** footer */
 
 footer {
-    background-color: white;
+    background-color: #E5DDF3;
     color: var(--black-color);
     padding: 2em 10em;
 }
@@ -12,8 +12,8 @@ footer {
 
 .fotter-row-grid {
     display: grid;
-    grid-template-columns: 21% 21% 24% 45%;
-    gap: 1%;
+    grid-template-columns: 24% 24% 49%;
+    gap: 2em;
 }
 
 footer ul {
@@ -36,6 +36,7 @@ footer a {
 
 .footer-title {
     font-size: 20px;
+    font-weight: 600;
 }
 
 .footer-contact {
@@ -47,6 +48,13 @@ footer a {
     margin-top: 2em;
 }
 
+.footer-image-container {
+    position: relative;
+    overflow: hidden;
+    padding: 0 1em;
+    border-radius: 20px;
+}
+
 .footer-image-container img {
     border-radius: 20px;
     width: 100%;
@@ -56,19 +64,20 @@ footer a {
 .btn-play {
     padding: 1em 2em;
     border: none;
-    background-color: #ffffff8a;
+    background-color: var(--black-color);
     position: absolute;
     right: 0;
     font-weight: 600;
     transition: all 0.3s ease-in-out;
     font-size: 18px;
+    color: #fff;
     border-radius: 5px;
-    transform: translateX(-21vw) translateY(140px);
+    transform: translateX(-14vw) translateY(130px);
     cursor: pointer;
 }
 
 .btn-play:hover {
-    background-color: #fff;
+    background-color: #202020;
 }
 
 .show-all {
