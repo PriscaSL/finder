@@ -13,7 +13,58 @@
     background-color: #fff;
 }
 
-.welcomtext img {
-    width: 8rem;
-    height: 8rem;
+.welcomtext{
+    position: relative;
+    width: 90%;
+    height: 30rem;
+    border-radius: 25px;
+    top:6rem;
+    background-color: var(--purple2);
 }
+
+.contenu{
+    padding-top: 10rem;
+}
+.welcomtext img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+#lineuser{
+    width: 115rem;
+    position: relative;
+    top: 10rem;
+    padding-right: 12rem;
+}
+.foothomeuser{
+    top: 12.5rem;
+    padding-right: 100rem;
+    position: relative;
+}
+
+.moduleList{
+    position: absolute;
+    display: flex;
+    gap: 4rem;
+}
+
+#eddy{
+    position: relative;
+    bottom: 1em;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+
+#Beginner{
+    position: relative;
+    bottom: 8rem;
+    font-size: 40px;
+    padding-bottom: 1rem;
+}
+
+#px{
+    position: relative;
+    bottom: 11rem;
+}
+
