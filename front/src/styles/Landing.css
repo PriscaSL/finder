@@ -1,62 +1,68 @@
-.landing{
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .partbody{
-    display: grid;
-    grid-template-columns: 1fr  1fr;
-    position: relative;
-  }
+.landing {
+      display: flex;
+      justify-content: space-between;
+      height: 100vh;
+      flex-grow: 1;
+      flex-basis: 0;
+      padding: 12em;
+      align-items: center;
+}
 
- .imagepartenaire img{
-    padding-left: 2rem;
-    width: 40px; 
- } 
- .imagepartenaire label{
-    padding-left: 1rem;
- }
- .imgland{
-    background-color: var(--grey);
-    border-radius: 20px;
-    width: 400px;
-    padding-left: 12rem;
-    margin-left: 12rem;
- }
- .imgland img{
-    width: 50%;
-    padding: 3rem;
-    border-radius: 20px;
- }
- #btnpurple{
-    left: 1rem;
-    width: 250px;
-    height: 70px;
-    padding: 1rem;
-    font-weight: bold;
- }
-a{
-   text-decoration: none;
-   color: black;
+.landing h1 {
+      font-size: 5em;
+      font-weight: 700;
+      color: #3D3D3D;
 }
-.partfoot img{
-    width: 80px;
-    padding: 5rem;
-    border-radius: 20px;
-} 
-.partfoot{
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    padding-left: 8rem;
-    padding-top: .5rem;
-    top: 15rem;
+
+.landing p {
+      font-size: 1.5em;
+      color: #3D3D3D;
+      margin-top: 1em;
 }
-.partfoot label{
-    position: relative;
-    bottom: 4rem;
-    right: 10rem;
+
+.start-for-free-btn {
+      background-color: #C3A9F8;
+      color: white;
+      font-size: 1.5em;
+      font-weight: 700;
+      padding: 1em 2em;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      margin-top: 2em;
 }
+
+.start-for-free-btn:hover {
+      background-color: rgb(179, 135, 255);
+}
+
+.rightSide-hero {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+}
+
+.imgland {
+      width: 80%;
+      margin: auto;
+}
+
+.landing-module {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 2em;
+   margin-bottom: 5em;
+}
+
+.landing-module .module-item {
+   display: flex;
+   align-items: center;
+   padding: 2em;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   gap: 1em;
+}
+

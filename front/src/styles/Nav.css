@@ -1,15 +1,19 @@
 nav {
-    background-color: black;
-    position: sticky;
+    background-color: #fff;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 10;
     box-shadow: 0px 40px 60px rgba(243, 237, 237, 0.1);
-    padding: 30px 5px;
+    padding: 1em 10em;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    display: flex;
+}
+
+.logo {
+    width: 100px;
 }
 
 button {
@@ -20,39 +24,46 @@ button {
     cursor: pointer;
     justify-content: center;
     text-decoration: none;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 1em 2em;
 }
 
-#btnnobg {
-    width: 90px;
-    height: 50px;
+.signin-link {
+    background-color: #C3A9F8;
+    color: white;
 }
 
-#btnwbg {
-    left: 1rem;
-    width: 180px;
-    height: 50px;
+.signin-link:hover {
+    background-color: rgb(179, 135, 255);
+}
+
+.start-for-free-link {
+    background-color: var(--black-color);
+    color: white;
+}
+
+.start-for-free-link:hover {
+    background-color: #202020;
 }
 
 .rightSide a {
     list-style: none;
     padding: 0 20px;
-    position: relative;
     text-decoration: none;
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: var(--grey);
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--black-color);
     transition: 0.3s ease-in-out;
+}
+
+.rightSide a:hover {
+    color: #202020;
 }
 
 .rightSide {
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding-right: 30rem;
+    align-items: center;
+    gap: 1em;
 }
-
-    #mobile {
-        display: block;
-    }
-
