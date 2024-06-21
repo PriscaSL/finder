@@ -1,5 +1,4 @@
 import './App.css';
-import Navbar from './components/Navbar';
 import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Whyus from './pages/Whyus'; 
@@ -12,7 +11,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
         <Routes>
           <Route index element={<Landing />} />
           <Route path="/landing" element={<Landing />} />
