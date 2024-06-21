@@ -2,6 +2,8 @@ import React from 'react'
 import '../styles/Beginner.css'
 import begin from '../assets/beginner.png'
 import SearchBar from '../components/SearchBar'
+import BeginnerItems from '../components/BeginnerItems'
+import BeginnerList from '../helpers/BeginnerList'
 
 function Beginner() {
   return (
@@ -22,13 +24,26 @@ function Beginner() {
                           <button id='begbtn'>Intermediate</button>
                           <button id='begbtn'>Advanced</button>
                       </div>
+                     
                     </div>
+                    <div id='linebeg' > <hr /></div>
                 </div>
                 <div className='imgbeginner'>
                      <img src={begin}/>
-                     <hr id='linebeg'/>
-                </div>
-                
+                </div>    
+        </div>
+        <div className='bas'>
+        <div className='beginnerList'>
+                  {BeginnerList.map((beginnerItem, key)=>{
+                      return ( 
+                      <BeginnerItems 
+                          key={key}
+                          imageb={beginnerItem.img} 
+                          titleb={beginnerItem.titl}  
+                          paragrapheb={beginnerItem.p}
+                          /> )
+                  })}
+            </div>
         </div>
         </div>
     </div>
