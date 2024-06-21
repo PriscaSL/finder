@@ -1,1 +1,19 @@
+.Homeuser{
+    display: grid;
+    grid-template-columns: 20% auto;
+}
 
+.Sidebar{
+    background: var(--grey);
+    width: 15rem;
+    height: 100vh;
+}
+
+.Dashboard{
+    background-color: #fff;
+}
+
+.welcomtext img {
+    width: 8rem;
+    height: 8rem;
+}
