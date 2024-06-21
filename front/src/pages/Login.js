@@ -31,7 +31,7 @@ function Login() {
         const request = loginPost(data);
         request.then(response => response.json())
             .then(data => {
-                if (data.status == false) {
+                if (data.status === false) {
                     setError(data.message);
                     setPassword('');
                     setIsLoading(false);

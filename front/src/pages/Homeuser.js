@@ -24,7 +24,7 @@ function Homeuser() {
        <div className='Dashboard'>
           <div className='welcomtext'>
               <div className='contenu'>
-              <img src={profile}/>
+              <img src={profile} alt="profil"/>
               <p id='eddy'>Welcome Eddy!</p>
               <p id='Beginner'>Beginner</p>
               <p id='px'><OfflineBoltOutlinedIcon/> 0 px</p>

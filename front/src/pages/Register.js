@@ -38,7 +38,7 @@ function Register() {
         const request = signUpPost(data);
         request.then(response => response.json())
             .then(data => {
-                if (data.status == false) {
+                if (data.status === false) {
                     setErrors(data.message);
                     setIsLoading(false);
                 } else {

@@ -29,7 +29,7 @@ function Beginner() {
                     <div id='linebeg' > <hr /></div>
                 </div>
                 <div className='imgbeginner'>
-                     <img src={begin}/>
+                     <img src={begin} alt='begin'/>
                 </div>    
         </div>
         <div className='bas'>
