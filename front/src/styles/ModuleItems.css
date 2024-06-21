@@ -1,0 +1,29 @@
+.moduleItem{
+    position: relative;
+    border: solid .5px rgb(54, 54, 54);
+    border-radius: 25px;
+    height: 15rem;
+    width: 27rem;
+}
+
+.modulecontent{
+    padding-top: 1rem;
+}
+.iconbackground{
+    background-color: var(--yellow);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    margin: 1rem;
+}
+#iconimg{
+    position: relative;
+    padding-top: .7rem;
+
+}
+
+#titlemodule{
+    padding-right: 14rem;
+    color: var(--green);
+}

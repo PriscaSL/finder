@@ -5,6 +5,9 @@
 
 :root {
   --grey:rgb(200, 198, 198);
+  --purple2: #E5DDF3;
+  --yellow: #F6F686;
+  --green: #2d833e;
 }
 body{
   padding: 0;

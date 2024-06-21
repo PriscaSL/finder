@@ -2,21 +2,43 @@ import React from 'react'
 import Sidebar from '../components/Sidebar';
 import '../styles/Homeuser.css' 
 import profile from '../assets/rakoto.jpg'
-import BoltIcon from '@mui/icons-material/Bolt';
-
+import OfflineBoltOutlinedIcon from '@mui/icons-material/OfflineBoltOutlined';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ModuleItems from '../components/ModuleItems';
+import ModuleList from '../helpers/ModuleList'
 
 function Homeuser() {
   return (
     <div className='Homeuser'>
        <div className='Sidebar'>
 
+
        </div>
        <div className='Dashboard'>
-            <div className='welcomtext'>
+          <div className='welcomtext'>
+              <div className='contenu'>
               <img src={profile}/>
+              <p id='eddy'>Welcome Eddy!</p>
               <p id='Beginner'>Beginner</p>
-              <p id='px'><BoltIcon/> 0 px</p>
+              <p id='px'><OfflineBoltOutlinedIcon/> 0 px</p>
+              </div>
+             
             </div>
+            <hr id='lineuser'/>
+            <div className='foothomeuser'>
+            <h1 className='letslearn'>Let's learn and practice  <i><ArrowForwardIcon/></i></h1>
+            <div className='moduleList'>
+                  {ModuleList.map((moduleItem, key)=>{
+                      return ( 
+                      <ModuleItems 
+                          key={key}
+                          image={moduleItem.image} 
+                          title={moduleItem.tilte}  
+                          paragraphe={moduleItem.paragraphe}
+                          /> )
+                  })}
+            </div>
+          </div>
        </div>
        
     </div>
