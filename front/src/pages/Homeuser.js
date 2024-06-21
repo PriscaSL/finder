@@ -1,24 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Sidebar from '../components/Sidebar';
-import '../styles/Homeuser.css' 
+import '../styles/Homeuser.css'
 import profile from '../assets/rakoto.jpg'
 import BoltIcon from '@mui/icons-material/Bolt';
 
 
 function Homeuser() {
+
+
+  useEffect(() => {
+    if (!sessionStorage.getItem('token')) {
+      window.location.href = '/login';
+    }
+  }, []);
+
   return (
     <div className='Homeuser'>
-       <div className='Sidebar'>
+      <div className='Sidebar'>
 
-       </div>
-       <div className='Dashboard'>
-            <div className='welcomtext'>
-              <img src={profile}/>
-              <p id='Beginner'>Beginner</p>
-              <p id='px'><BoltIcon/> 0 px</p>
-            </div>
-       </div>
-       
+      </div>
+      <div className='Dashboard'>
+        <div className='welcomtext'>
+          <img src={profile} />
+          <p id='Beginner'>Beginner</p>
+          <p id='px'><BoltIcon /> 0 px</p>
+        </div>
+      </div>
+
     </div>
   )
 }

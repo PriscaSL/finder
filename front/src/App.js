@@ -9,13 +9,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
 function App() {
+
   return (
     <Router>
       <div className="App">
         <Routes>
           <Route index element={<Landing />} />
           <Route path="/landing" element={<Landing />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register />} />
           <Route path="/why-us" element={<Whyus />} />
           <Route path="/services" element={<Services />} />
