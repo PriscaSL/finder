@@ -4,9 +4,7 @@ import Sidebar from '../components/Sidebar'
 function Homeuser() {
   return (
     <div className='Homeuser'>
-      <div className='Sidebar'>
-            <Sidebar/>
-      </div>
+      <Sidebar/>
       <div className='DashBoard'>
 
       </div>
