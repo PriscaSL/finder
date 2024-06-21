@@ -1,39 +1,34 @@
 import React from 'react'
-import '../styles/Register.css'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import IconGlish from '../assets/ICONE GLISH.png';
+import Google from '../assets/google.png';
+
 
 function Register() {
-  return (
-    <div className='parent'>
-        <div className='content'>
-            <div className='text1'>
-                <p id='titreh1'>Welcome  User!</p>
-                <p id='titrep'>Have you an account? <span id='sign'><Link to='/login'>Sign In</Link></span></p>
-                <hr class="line"/>
-                <label><input type="checkbox"/>I agree the term of <span  id='sign'>condition and service</span></label>
-            </div>
-            <div className='form'>
+    return (
+        <div className='container'>
+            <div className='logo'><img src={IconGlish} alt='logo' /></div>
+            <div className='login-form'>
+                <h3 className='login-intro'>Sign up to Glish</h3>
+                <p className='login-p'>Already have an account? <Link to='/login' className='form-link'>Log in</Link></p>
                 <form>
-                    <div className='firstin'>
-                        <input type="text" id="name" name="name" placeholder='Name' />
-                    </div>
-                    <div className='firstin'>
-                        <input type="text" id="email" name="email" placeholder='Email'/>
-                    </div>
-                    <div className='firstin'>
-                        <input type="password" id="password" name="password" placeholder='Password' />
-                    </div>
-                    <div className='firstin'>
-                        <input type="password" id="password" name="password" placeholder='Confirm Password' />
-                    </div>
-                    <button type="submit" id='btn'>Sign Up</button>
-
+                    <input type='text' placeholder='First name' />
+                    <input type='text' placeholder='Last name' />
+                    <input type='email' placeholder='Email' />
+                    <input type='password' placeholder='Password' />
+                    <button className='btn-signin'>Register</button>
                 </form>
+                <div className='division'>
+                    <div className='ligne'></div>
+                    <h3>Or</h3>
+                    <div className='ligne'></div>
+                </div>
+                <div>
+                    <button className='btn-google'><img src={Google} className='google-icon' alt='google'/> Continue with Google</button>
+                </div>
             </div>
         </div>
-       
-    </div>
-  )
+    )
 }
 
 export default Register
