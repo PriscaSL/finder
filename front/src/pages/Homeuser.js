@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import Sidebar from '../components/Sidebar';
 import '../styles/Homeuser.css'
 import profile from '../assets/rakoto.jpg'
 import OfflineBoltOutlinedIcon from '@mui/icons-material/OfflineBoltOutlined';

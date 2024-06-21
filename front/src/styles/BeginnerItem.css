@@ -1,0 +1,38 @@
+.begItem{
+    position: relative;
+    border: solid .5px rgb(54, 54, 54);
+    border-radius: 25px;
+    height: 15rem;
+    width: 27rem;
+}
+
+.begcontent{
+    padding-top: 1rem;
+}
+.iconback{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    margin: 1rem;
+}
+#begicimg{
+    position: relative;
+    padding-bottom: 3rem;
+    padding-left: .7rem;
+
+}
+
+#titlbeg{
+    top: 1rem;
+    position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: var(--black);
+    font-size: 1.2rem;
+}
+#p{
+    position: relative;
+    padding-left: 1rem;
+    top: 2rem;
+}

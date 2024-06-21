@@ -23,12 +23,17 @@
 }
 
 .Niveau{
-   padding-top:9rem;
+   padding-top:7rem;
    display: flex;
    gap: 5rem;
 }
 
-
+#begbtn{
+    width: 180px;
+    height: 60px;
+    border-radius: 10px;
+    background: transparent;
+}
 #begbtn:hover{
     width: 180px;
     height: 60px;
@@ -39,10 +44,24 @@
 .imgbeginner{
     position: relative;
     top: 5rem;
-    left: 15rem;
+    left: -25rem;
 }
 
 #linebeg{
-    position: absolute;
-    bottom: 21rem;
+ position: relative;
+ top: 4.5rem;
+ width: 100rem;
+}
+
+.bas{
+    top: 8.5rem;
+    padding-right: 100rem;
+    position: relative;
+}
+.beginnerList{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+    bottom:.5rem;
 }
