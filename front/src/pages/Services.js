@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Navbar from '../components/Navbar';
 
 function Services() {
   return (
-    <div>Services</div>
+    <>
+      <Navbar/>
+      <div>Services</div>
+    </>
   )
 }
 

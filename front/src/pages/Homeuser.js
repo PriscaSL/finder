@@ -1,5 +1,5 @@
 import React from 'react'
-import Sidebar from '../components/Sidebar'
+import Sidebar from '../components/Sidebar';
 import '../styles/Homeuser.css' 
 import profile from '../assets/rakoto.jpg'
 import BoltIcon from '@mui/icons-material/Bolt';

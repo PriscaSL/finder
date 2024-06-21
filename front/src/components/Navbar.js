@@ -13,8 +13,8 @@ function Navbar() {
         <Link to="/why-us">Why us</Link>
         <Link to="/homeuser">Services-Homeuserpermanent-</Link>
         
-        <button id='btnnobg'>Sign in</button>
-        <button id='btnwbg'>Start for free</button>
+        <button id='btnnobg' onClick={(e) => window.location.href ="/login"}>Sign in</button>
+        <button id='btnwbg' onClick={(e) => window.location.href ="/login"}>Start for free</button>
       </div>
     </nav>
   );
