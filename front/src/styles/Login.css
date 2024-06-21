@@ -46,10 +46,9 @@
 .login-form input {
     width: 100%;
     padding: 1em;
-    margin-bottom: 1em;
+    margin-top: 1em;
     border-radius: 5px;
     border: 1px solid #ccc;
-    margin-bottom: 1em;
 }
 
 .btn-signin {
@@ -65,14 +64,15 @@
     justify-content: center;
     align-items: center;
     gap: 1em;
+    margin-top: 1em;
 }
 
 .btn-signin:hover {
-    background-color: #333;
+    background-color: #676767;
 }
 
 .btn-signin-disabled {
-    background-color: #333;
+    background-color: #676767;
     cursor: not-allowed;
 }
 
@@ -84,6 +84,15 @@
     background-color: var(--black-color);
     color: white;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.btn-signup:hover {
+    background-color: #676767;
 }
 
 .division {
@@ -129,4 +138,10 @@
     background-color: #f8d7da;
     padding: 1em;
     border-radius: 5px;
+}
+
+.label-error {
+    color: rgb(255, 87, 87);
+    margin: 0.5em 0;
+    font-size: 14px;
 }

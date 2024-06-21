@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Sidebar from '../components/Sidebar';
-import '../styles/Homeuser.css' 
+import '../styles/Homeuser.css'
 import profile from '../assets/rakoto.jpg'
 import OfflineBoltOutlinedIcon from '@mui/icons-material/OfflineBoltOutlined';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -8,6 +8,14 @@ import ModuleItems from '../components/ModuleItems';
 import ModuleList from '../helpers/ModuleList'
 
 function Homeuser() {
+
+
+  useEffect(() => {
+    if (!sessionStorage.getItem('token')) {
+      window.location.href = '/login';
+    }
+  }, []);
+
   return (
     <div className='Homeuser'>
        <div className='Sidebar'>
