@@ -10,7 +10,7 @@ function Navbar() {
       </div>
       <div className='rightSide' id='navbar'>
          
-        <Link to="/why-us">Why us</Link>
+        <Link to="/beginner">Why us-BeginnerPagePerm</Link>
         <Link to="/homeuser">Services-Homeuserpermanent-</Link>
         
         <button id='btnnobg' onClick={(e) => window.location.href ="/login"}>Sign in</button>

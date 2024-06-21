@@ -1,0 +1,49 @@
+.searchbar .MuiOutlinedInput-root {
+    border-radius: 40px; 
+    font-size: 2rem;
+    font-weight: bold;
+    width:30rem;
+  }
+  .searchbar .MuiOutlinedInput-notchedOutline {
+    border-style: none;
+    background-color: var(--grey);
+    border-width: .2rem;
+  }
+
+  .search-icon{
+    font-size: 15rem; 
+    font-weight: bold; 
+    color: var(--black);
+    z-index: 1000;
+  }
+
+  button{
+    background: none;
+    border-style: none;
+  }
+
+  .searchbar .MuiOutlinedInput-root .search-icon,.searchbar .MuiOutlinedInput-root .navigate-icon{
+    font-size: 3rem;
+  }
+
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+ 
+
+
+    
+  
+
+  

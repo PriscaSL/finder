@@ -10,7 +10,6 @@
     padding-top: 1rem;
 }
 .iconbackground{
-    background-color: var(--yellow);
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
@@ -20,10 +19,20 @@
 #iconimg{
     position: relative;
     padding-top: .7rem;
+    padding-left: .7rem;
 
 }
 
 #titlemodule{
-    padding-right: 14rem;
-    color: var(--green);
+    top: 1rem;
+    position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: var(--black);
+    font-size: 1.2rem;
+}
+#number{
+    position: relative;
+    padding-left: 1rem;
+    top: 2rem;
 }
