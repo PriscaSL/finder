@@ -61,6 +61,19 @@
     color: white;
     cursor: pointer;
     margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.btn-signin:hover {
+    background-color: #333;
+}
+
+.btn-signin-disabled {
+    background-color: #333;
+    cursor: not-allowed;
 }
 
 .btn-signup {
@@ -107,4 +120,13 @@
 .google-icon {
     width: 20px;
     height: 20px;
+}
+
+.error {
+    color: #721c24;
+    text-align: center;
+    margin-bottom: 1em;
+    background-color: #f8d7da;
+    padding: 1em;
+    border-radius: 5px;
 }
