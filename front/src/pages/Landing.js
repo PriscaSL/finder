@@ -3,6 +3,7 @@ import '../styles/Landing.css'
 import imgland from '../assets/hero-img.png'
 import Navbar from '../components/Navbar'
 ;import ModuleList from '../helpers/ModuleList';
+import Footer from '../components/Footer';
 
 function Landing() {
 	return (
@@ -22,7 +23,7 @@ function Landing() {
 				{ModuleList.map((moduleItem, key) => {
 					return (
 							<div className='module-item'>
-								<div className='icon' style={{backgroundColor: moduleItem.bg}}>
+								<div className='icon' style={{backgroundColor: moduleItem.background}}>
 									{moduleItem.image}
 								</div>
 								<h4>{moduleItem.tilte}</h4>
@@ -30,6 +31,7 @@ function Landing() {
 					)
 				})}
 			</div>
+			<Footer	/>
 		</>
 	)
 }

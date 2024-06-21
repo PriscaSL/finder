@@ -23,7 +23,7 @@
 .start-for-free-btn {
       background-color: #C3A9F8;
       color: white;
-      font-size: 1.5em;
+      font-size: 1.2em;
       font-weight: 700;
       padding: 1em 2em;
       border: none;
@@ -60,9 +60,14 @@
 .landing-module .module-item {
    display: flex;
    align-items: center;
-   padding: 2em;
+   padding: 1.5em;
    border: 1px solid #ccc;
    border-radius: 10px;
    gap: 1em;
+}
+
+.module-item .icon {
+   padding: 1em;
+   border-radius: 50%;
 }
 
