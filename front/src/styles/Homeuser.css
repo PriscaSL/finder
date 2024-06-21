@@ -1,0 +1,13 @@
+.Homeuser{
+    display: grid;
+    grid-template-columns: 35% 70%;
+}
+
+.Sidebar{
+    background-color: var(--grey);
+}
+
+.DashBoard{
+    background-color: #fff;
+}
+

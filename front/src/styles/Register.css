@@ -1,0 +1,105 @@
+.parent{
+    position: absolute;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 35rem;
+    align-items: center;
+    gap: 12rem;
+    top:5rem;
+}
+#titreh1{
+    font-size: 7rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding-right: 8rem;
+}
+
+
+#titrep{
+    font-size: 1.5rem;
+    padding-right:11rem;
+}
+
+#sign{
+    font-weight: 550;
+}
+form{
+    position: relative;
+    padding-bottom: 8rem;
+}
+
+form input{
+    height: 3rem;
+    background: none;
+    width: 30rem;
+    padding: 1rem;
+    border-radius: 50px;
+    border: 3px solid var(--grey);
+}
+
+::placeholder{
+    font-size: 1.5rem;
+    padding-left: 4rem;
+    font-weight: 550;
+}
+
+#passp{
+    padding-right: 18rem;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#btn{
+    background-color: var(--grey);
+    border-style: none;
+    height: 4rem;
+    width: 33rem;
+    padding: 1rem;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    font-weight: 550;
+    color: var(--white);
+}
+.form{
+    margin-top: 18rem;
+
+}
+
+.firstin {
+    margin-bottom: 40px; 
+}
+
+
+.ligne {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.line {
+    flex: 1; 
+    border: 0;
+    border-top: 3px solid #000; 
+    margin: 12px 10px; 
+    width: 50rem;
+}
+
+.centered-text {
+    white-space: nowrap; 
+    padding: 0 10px; 
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
+
+
+
