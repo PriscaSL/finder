@@ -1,1 +1,132 @@
+.container {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+}
 
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.login-form {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 2em;
+    margin-top: 1em;
+    width: 400px;
+}
+
+.login-form h3 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.login-form p {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.form-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-link:hover {
+    text-decoration: underline;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 1em;
+}
+
+.btn-signin {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--black-color);
+    color: white;
+    cursor: pointer;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.btn-signin:hover {
+    background-color: #333;
+}
+
+.btn-signin-disabled {
+    background-color: #333;
+    cursor: not-allowed;
+}
+
+.btn-signup {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--black-color);
+    color: white;
+    cursor: pointer;
+}
+
+.division {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    align-content: center;
+}
+
+.ligne {
+    width: 45%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.btn-google {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: var(--black-color);
+    cursor: pointer;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.error {
+    color: #721c24;
+    text-align: center;
+    margin-bottom: 1em;
+    background-color: #f8d7da;
+    padding: 1em;
+    border-radius: 5px;
+}
