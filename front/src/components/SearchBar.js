@@ -7,17 +7,10 @@ import '../styles/SearchBar.css'
 
 function SearchBar() {
   return (
-    <TextField
-      id="searchbar"
-      className='searchbar'
-      InputProps={{
-        startAdornment: (
-          <InputAdornment position="start">
-            <SearchIcon className="search-icon"/>
-          </InputAdornment>
-        ),
-      }}
-    />
+    <div className='search-input'>
+      <SearchIcon className='search-icon'/>
+      <input type="text" placeholder="Search" className="searchbar" />
+    </div>
   )
 }
 

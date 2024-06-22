@@ -1,20 +1,24 @@
-.searchbar .MuiOutlinedInput-root {
+.searchbar {
     border-radius: 40px; 
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
     width:30rem;
+    padding: 0.8em 0.8em 0.8em 4em;
+    background-color: #f3f3f3;
+    border: none;
   }
-  .searchbar .MuiOutlinedInput-notchedOutline {
-    border-style: none;
-    background-color: var(--grey);
-    border-width: .2rem;
+  
+  .search-input {
+    display: flex;
+    justify-content: start;
+    align-items: center;
   }
 
   .search-icon{
-    font-size: 15rem; 
-    font-weight: bold; 
-    color: var(--black);
-    z-index: 1000;
+    position: absolute;
+    left: 2rem;
+    z-index: 100;
+    font-size: 30px!important;
   }
 
   button{

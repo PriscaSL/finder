@@ -1,7 +1,7 @@
 import Logo from "../assets/ICONE GLISH.png";
 import LogoBlack from '../assets/LOGO GLISH NOIR.png';
 import Rakoto from '../assets/rakoto.jpg';
-
+import BoltIcon from '@mui/icons-material/Bolt';
 
 
 
@@ -37,6 +37,7 @@ function NavBarDashboard() {
                     </li>
                 </ul>
                 <ul className="navbar-nav navbar-nav-right">
+                    <li className="nav-item nav-profile"><BoltIcon />0 px</li>
                     <li className="nav-item nav-profile dropdown">
                         <a className="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
                             <img src={Rakoto} alt="profile" />

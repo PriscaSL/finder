@@ -9,11 +9,12 @@ import NavBarDashboard from '../components/NavDashboard';
 import profile from '../assets/rakoto.jpg';
 import Banner from '../assets/bannerhome.png';
 
-import OfflineBoltOutlinedIcon from '@mui/icons-material/OfflineBoltOutlined';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 import ModuleItems from '../components/ModuleItems';
 import ModuleList from '../helpers/ModuleList';
+import BoltIcon from '@mui/icons-material/Bolt';
+
 
 function Homeuser() {
 
@@ -46,7 +47,7 @@ function Homeuser() {
                               </div>
                               <h3>Welcome Eddy!</h3>
                               <p className='niveau'>Beginner</p>
-                              <p className='xp'><OfflineBoltOutlinedIcon /> 0 px</p>
+                              <p className='xp'><BoltIcon /> 0 px</p>
                             </div>
                           </div>
                           <hr className='lineuser' />

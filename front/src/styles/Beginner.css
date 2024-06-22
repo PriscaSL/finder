@@ -1,60 +1,55 @@
-.BeginnerParent{
-    display: grid;
-    grid-template-columns: 20% auto;
-}
-
-.haut{
-    padding-top: 5rem;
-    display: flex;
-}
 
 .textcontenu{
-    position: relative;
-    top: 2rem;
+    margin-top: 3em;
 }
 
 #titrebeginner{
-    font-size: 3.5rem;
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 #txtbeginner{
-    font-size: 1.5rem;
-    font-weight: 200;
+    margin-top: 2em;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 .Niveau{
-   padding-top:7rem;
+   padding-top:1.6em;
    display: flex;
-   gap: 5rem;
+   gap: 3em;
 }
 
-#begbtn{
+.begbtn{
     width: 180px;
-    height: 60px;
+    padding: 0.5em 0;
     border-radius: 10px;
     background: transparent;
 }
-#begbtn:hover{
+
+.beg-btn-active {
+    background-color: var(--yellow);
+}
+.begbtn:hover{
     width: 180px;
-    height: 60px;
     border-radius: 10px;
     background-color: var(--yellow);
 }
 
 .imgbeginner{
-    position: relative;
-    top: 5rem;
-    left: -25rem;
+    position: absolute;
+    right: 5em;
+    top: -1.8rem;
+    width: 300px;
 }
 
 #linebeg{
- position: relative;
- top: 4.5rem;
- width: 100rem;
+ width: 100%;
+ margin: 2em 0;
 }
 
 .bas{
-    top: 8.5rem;
+    top: 3rem;
     padding-right: 100rem;
     position: relative;
 }
@@ -62,6 +57,6 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 4rem;
+    gap: 3.4rem;
     bottom:.5rem;
 }

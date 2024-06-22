@@ -10,8 +10,8 @@ function BeginnerItems({imageb, titleb, paragrapheb}) {
         <div className='iconback'>
            <p id='begicimg' ><img src={imageb} alt='ttt'/></p>
         </div>
-        <h4 id='titlbeg'>{titleb}</h4>
-        <p id='p'>{paragrapheb}</p>
+        <h4 className='titlbeg'>{titleb}</h4>
+        <p className='p'>{paragrapheb}</p>
         </div>
     </div>
   )
