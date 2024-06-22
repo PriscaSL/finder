@@ -61,7 +61,7 @@ function Landing() {
 					</div>
 					<div className='testimonial-content'>
 						<p>“I have been using Glish for a few months now and I have to say that it is the best platform for learning English. The quizzes are fun and engaging and the pronunciation practice has helped me a lot.”</p>
-						<h4>Arisoa RABE</h4>
+						<h4>Louise Marie</h4>
 					</div>
 				</div>
 				<div className="testimonial-footer">
