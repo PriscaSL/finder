@@ -23,7 +23,7 @@ function Register() {
     const [errors, setErrors] = useState({});
     const [isLoading, setIsLoading] = useState(false);
 
-    const LOGIN_URL = 'https://zahageek-back.onrender.com/api/auth/register';
+    const LOGIN_URL = 'http://127.0.0.1:8000/api/auth/register';
 
     const submitForm = (e) => {
         setIsLoading(true);
@@ -60,7 +60,7 @@ function Register() {
 
     return (
         <div className='container'>
-            <div className='logo'><img src={IconGlish} alt='logo' /></div>
+            <div className='logo' style={{cursor: "pointer"}} onClick={(e) => window.location.href="/" }><img src={IconGlish} alt='logo' /></div>
             <div className='login-form'>
                 <h3 className='login-intro'>Sign up to Glish</h3>
                 <p className='login-p'>Already have an account? <Link to='/login' className='form-link'>Log in</Link></p>

@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import '../styles/Beginner.css'
 import Sary from '../assets/sary.png';
 import NavBarDashboard from '../components/NavDashboard';
@@ -20,37 +20,98 @@ const ModuleItem = () => {
 
     const [moduleItem, setModuleItem] = useState({});
 
-    const [html, setHtml] = useState("");
+    const [chat, setChat] = useState([]);
+
+    const [html, setHtml] = useState('');
+
+    const [question, setQuestion] = useState("");
+
+    const [count, setCount] = useState(0);
+
+    // Ref to the chat container for scrolling
+    const chatContainerRef = useRef(null);
+
+
+    const handleAskQuestion = async () => {
+        // Ajouter la question de l'utilisateur au chat
+        const newChat = [...chat, { user: "user", message: question }];
+        setChat(newChat);
+        
+        // Réinitialiser la question dans le state
+        setQuestion('');
+    
+        try {
+            // Effectuer la requête pour obtenir la réponse de l'API
+            const response = await fetchQuestion(question);
+            const data = await response.json();
+    
+            // Ajouter la réponse de l'API au chat en conservant l'ancien état de chat
+            setChat(prevChat => [...prevChat, { user: "IA", message: data.body_content }]);
+        } catch (error) {
+            console.error('Error fetching question:', error);
+        }
+    };
+
+    const onKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            handleAskQuestion();
+        }
+    }
+
+    const QUESTION_URL = "http://127.0.0.1:8000/api/glish/questions?prompt='";
+
+    const fetchQuestion = async (question) => {
+        const myHeaders = new Headers();
+        const token = sessionStorage.getItem('token');
+        myHeaders.append("Authorization", "Bearer " + token);
+
+        const requestOptions = {
+            method: "GET",
+            headers: myHeaders,
+            redirect: "follow"
+        };
+        return await fetch(QUESTION_URL + question + "'&theme='" + moduleItem.name + "'", requestOptions);
+    }
 
     useEffect(() => {
         if (!sessionStorage.getItem('token')) {
             window.location.href = '/login';
         }
 
-        const request = fetchModuleItem();
-        request.then((response) => {
-            if (response.status === 200) {
-                response.json().then((data) => {
-                    setModuleItem(data);
-                    // get lessons from prompt
-                    const req_lessons = fetchLessons(data.name);
-                    req_lessons.then((response) => response.json())
-                    .then((data) => {
-                        if (data.status === true) {
-                            console.log(data);
-                        } else {
-                            console.log("Error");
-                        }
-                    })
-                });
-            } else {
-                console.log("Error");
-            }
-        });
-    }, []);
+        if (chatContainerRef.current) {
+            chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+          }
+
+        if(count === 0) {
+            const request = fetchModuleItem();
+            request.then((response) => {
+                if (response.status === 200) {
+                    response.json().then((data) => {
+                        setModuleItem(data);
+                        // get lessons from prompt
+                        const req_lessons = fetchLessons(data.name);
+                        req_lessons.then((response) => response.json())
+                            .then((data) => {
+                                if (data.status === true) {
+                                    //console.log(data);
+                                    setChat([...chat, {user: "IA", message: data.body_content}]);
+                                    //setHtml(data.body_content)
+                                } else {
+                                    console.log("Error");
+                                }
+                            })
+                    });
+                } else {
+                    console.log("Error");
+                }
+            });
+            setCount(1);
+        }
+        
+    }, [chat]);
 
 
-    const MODULE_URL = "https://zahageek-back.onrender.com/api/glish/levels/modules/module_elements/" + id;
+    const MODULE_URL = "http://127.0.0.1:8000/api/glish/levels/modules/module_elements/" + id;
 
 
     const fetchModuleItem = async () => {
@@ -65,8 +126,9 @@ const ModuleItem = () => {
         };
         return await fetch(MODULE_URL, requestOptions);
     }
-    
-    const LECON_URL = "https://zahageek-back.onrender.com/api/glish/lessons?prompt=";
+
+
+    const LECON_URL = "http://127.0.0.1:8000/api/glish/lessons?prompt=";
 
     const fetchLessons = async (prompt) => {
         const myHeaders = new Headers();
@@ -114,40 +176,44 @@ const ModuleItem = () => {
                                                     </div>
                                                 </div>
                                                 <div className='my-scrollable'>
-                                                    <div className='ia-response'>
-                                                        <div className='ia-icon'>
-                                                            <img src={IconGlish} alt="ia" />
-                                                        </div>
-                                                        <div className='ia-text'>
-                                                            <h3>Lorem ipsum dolor sit amet.</h3>
-                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maiores placeat,
-                                                                non vitae molestiae eligendi! Dolore omnis, quam nihil veniam quo libero
-                                                                ut soluta reprehenderit eum a doloremque ad adipisci?</p>
-                                                            <div className='ia-text-footer'>
-                                                                <div>
-                                                                    <VolumeUpIcon />
-                                                                    <ContentCopyIcon />
+
+                                                    {chat.map((item, key) => { 
+                                                        if (item.user === "user") {
+                                                            return (
+                                                                <div className='person-response' key={key}>
+                                                                    <div className='person-icon'>
+                                                                        <img src={Rakoto} alt="ia" />
+                                                                    </div>
+                                                                    <div className='person-text'>
+                                                                        <div dangerouslySetInnerHTML={{ __html: item.message }} />
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className='person-response'>
-                                                        <div className='person-icon'>
-                                                            <img src={Rakoto} alt="ia" />
-                                                        </div>
-                                                        <div className='person-text'>
-                                                            <h3>Lorem ipsum dolor sit amet.</h3>
-                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maiores placeat,
-                                                                non vitae molestiae eligendi! Dolore omnis, quam nihil veniam quo libero
-                                                                ut soluta reprehenderit eum a doloremque ad adipisci?</p>
-                                                        </div>
-                                                    </div>
+                                                            );
+                                                        } else {
+                                                            return (
+                                                                <div className='ia-response' key={key}>
+                                                                    <div className='ia-icon'>
+                                                                        <img src={IconGlish} alt="ia" />
+                                                                    </div>
+                                                                    <div className='ia-text'>
+                                                                    <div dangerouslySetInnerHTML={{ __html: item.message }} />
+                                                                        <div className='ia-text-footer'>
+                                                                            <div>
+                                                                                <VolumeUpIcon />
+                                                                                <ContentCopyIcon />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            );
+                                                        }
+                                                    })}
                                                 </div>
 
                                                 <div className='prompt-input'>
                                                     <KeyboardVoiceIcon />
-                                                    <input type='text' className='prompti' placeholder='Type your answer here' />
-                                                    <ArrowCircleUpIcon />
+                                                    <input type='text' className='prompti' placeholder='Ask Questions...' value={question} onChange={(e) => setQuestion(e.target.value)} onKeyPress={onKeyPress} />
+                                                    <ArrowCircleUpIcon onClick={(e) => handleAskQuestion()}/>
                                                 </div>
                                             </div>
                                         </div>

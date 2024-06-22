@@ -127,10 +127,10 @@
     background-color: var(--black-color);
 }
 
-.my-scrollable {
+/*.my-scrollable {
     overflow-y: auto;
-    max-height: 400px;
-}
+    max-height: 500px;
+}*/
 
 
 .prompt-input {
@@ -175,10 +175,15 @@
 
 .ia-text {
     background-color: #f3f3f3;
-    padding: 1em;
+    padding: 2%;
     border-radius: 10px;
     font-weight: 700;
     width: 80%;
+    text-align: left;
+}
+
+.ia-text h1 {
+    margin: 1em 0;
 }
 
 .ia-text-footer div {
@@ -208,10 +213,11 @@
 
 .person-text {
     background-color: #e5ddf3;
-    padding: 1em;
+    padding: 2em;
     border-radius: 10px;
     font-weight: 700;
     width: 80%;
+    text-align: right;
 }
 
 .check-img {

@@ -35,7 +35,7 @@ const Module = () => {
     }, []);
 
 
-    const MODULE_URL = "https://zahageek-back.onrender.com/api/glish/levels/modules/" + id + "/module_elements";
+    const MODULE_URL = "http://127.0.0.1:8000/api/glish/levels/modules/" + id + "/module_elements";
 
 
     const fetchModule = async () => {
@@ -90,7 +90,7 @@ const Module = () => {
                                                         {module.length > 0 && module.map((moduleItem, key) => {
                                                             return (
 
-                                                                <div>
+                                                                <div key={key}>
                                                                     <h3>{moduleItem.name}</h3>
                                                                     <button className='btn-start' onClick={(e) => window.location.href = "/module-item/" + moduleItem.id }>Start</button>
                                                                 </div>

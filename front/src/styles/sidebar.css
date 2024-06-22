@@ -17,6 +17,12 @@
 .sidebar {
     height: 100vh !important;
     background-color: #f3f3f3!important;
+    width: 5.3em !important;
+}
+
+.sidebar nav {
+    margin: 0!important;
+    padding: 0!important;
 }
 
 .menu-title {
@@ -24,6 +30,6 @@
 }
 
 .nav-link {
-    padding-top: 1.2em !important;
+    padding-top: 1em !important;
     padding-bottom: 1.2em !important;
 }

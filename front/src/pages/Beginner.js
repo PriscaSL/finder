@@ -10,7 +10,7 @@ import image1 from '../assets/Groupe 1.png'
 
 function Beginner() {
 
-  const MODULE_LIST_URL = "https://zahageek-back.onrender.com/api/glish/levels/";
+  const MODULE_LIST_URL = "http://127.0.0.1:8000/api/glish/levels/";
 
   useEffect(() => {
     if (!sessionStorage.getItem('token')) {
