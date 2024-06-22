@@ -1,15 +1,13 @@
-
-.welcomtext{
+.welcomtext {
     width: 100%;
-    height: 20rem;
+    height: 22rem;
     border-radius: 25px;
-    top:6rem;
     background-color: var(--purple2);
     display: flex;
     justify-content: center;
 }
 
-.contenu{
+.contenu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,18 +15,29 @@
     flex-direction: column;
 }
 
-.contenu img {
+.banner {
+    position: absolute;
+    width: 70%;
+    margin: auto;
+    top: 50px;
+}
+
+.contenu .img-container {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     margin-bottom: 1em;
+    overflow: hidden;
+}
+
+.contenu img {
+   width: 100%;
 }
 
 .contenu h3 {
     font-size: 1.6em;
     font-weight: 700;
     text-align: center;
-
 }
 
 .contenu .niveau {
@@ -52,6 +61,37 @@
     height: 1px;
     margin: 3em 0;
     background-color: rgb(100, 100, 100);
+}
+
+.foothome-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foothome-navigation button {
+    background-color: #c3a9f8;
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 1em;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 1.2em;
+}
+
+.letslearn {
+    font-size: 2.6em;
+    font-weight: 500;
+}
+
+.moduleList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2em;
+    margin-top: 3em;
 }
 
 /*

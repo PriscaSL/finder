@@ -2,19 +2,15 @@
     position: relative;
     border: solid .5px rgb(54, 54, 54);
     border-radius: 25px;
-    height: 15rem;
-    width: 27rem;
+    height: 12rem;
+    width: 30rem;
+    padding: 1em;
 }
 
-.modulecontent{
-    padding-top: 1rem;
-}
 .iconbackground{
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
-    position: relative;
-    margin: 1rem;
 }
 #iconimg{
     position: relative;
@@ -24,15 +20,13 @@
 }
 
 #titlemodule{
-    top: 1rem;
-    position: relative;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin-top: 1em;
     color: var(--black);
-    font-size: 1.2rem;
+    font-size: 1.1em;
+    font-weight: 600;
 }
 #number{
     position: relative;
-    padding-left: 1rem;
-    top: 2rem;
+    text-align: justify;
+    top: 0.5em;
 }

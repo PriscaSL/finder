@@ -8,7 +8,7 @@ import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 
 function Sidebar() {
     return (
-        <nav className="sidebar sidebar-offcanvas" id="sidebar">
+        <nav className="sidebar sidebar-offcanvas sidebar-icon-only" id="sidebar">
             <ul className="nav" style={{paddingTop: "60px"}}>
                 <li className="nav-item">
                     <a className="nav-link" href="index.html">

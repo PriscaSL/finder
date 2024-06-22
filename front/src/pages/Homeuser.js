@@ -7,7 +7,7 @@ import "../styles/dashboard/vendor.bundle.base.css";
 import "../styles/dashboard/vertical-layout-light/style.css";
 import NavBarDashboard from '../components/NavDashboard';
 import profile from '../assets/rakoto.jpg';
-
+import Banner from '../assets/bannerhome.png';
 
 import OfflineBoltOutlinedIcon from '@mui/icons-material/OfflineBoltOutlined';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -39,8 +39,11 @@ function Homeuser() {
                       <div className='Homeuser'>
                         <div className='Dashboard'>
                           <div className='welcomtext'>
+                            <img src={Banner} alt='banner' className='banner' />
                             <div className='contenu'>
-                              <img src={profile} alt="profil" />
+                              <div className='img-container'>
+                                <img src={profile} alt="profil" />
+                              </div>
                               <h3>Welcome Eddy!</h3>
                               <p className='niveau'>Beginner</p>
                               <p className='xp'><OfflineBoltOutlinedIcon /> 0 px</p>
@@ -48,10 +51,10 @@ function Homeuser() {
                           </div>
                           <hr className='lineuser' />
                           <div className='foothomeuser'>
-                            <span>
+                            <div className='foothome-navigation'>
                               <h1 className='letslearn'>Let's learn and practice  <i><ArrowForwardIcon /></i></h1>
                               <button id='getstart'>Get Started for Free </button>
-                            </span>
+                            </div>
                             <div className='moduleList'>
                               {ModuleList.map((moduleItem, key) => {
                                 return (
