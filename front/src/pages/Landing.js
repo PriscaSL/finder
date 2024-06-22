@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import '../styles/Landing.css'
 import imgland from '../assets/hero.png'
 import Navbar from '../components/Navbar';
@@ -11,10 +11,24 @@ import Logo4 from '../assets/LOGO4.jpg';
 import arisoa from '../assets/arisoa.jpg';
 import banner from '../assets/Bannerimg.png';
 
+import Preloader from '../components/Preloader';
+
+
 function Landing() {
+
+	const [loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setLoading(false);
+		}, 2000);
+	}, []);
+
 	return (
 		<>
-			<Navbar />
+			{loading && <Preloader />}
+			{!loading && <>
+				<Navbar />
 			<div className="landing" >
 				<div className="leftSide-hero">
 					<h1>The best way <span>To learn</span> English</h1>
@@ -71,6 +85,8 @@ function Landing() {
 				</div>
 			</div>
 			<Footer />
+			</>
+			}
 		</>
 	)
 }

@@ -15,7 +15,7 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
+      <div className="">
         <Routes>
           <Route index element={<Landing />} />
           <Route path="/landing" element={<Landing />} />

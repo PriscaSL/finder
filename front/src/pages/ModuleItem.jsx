@@ -13,6 +13,16 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import Rakoto from '../assets/rakoto.jpg';
 import { useParams } from 'react-router-dom';
 
+import Preloader from '../components/Preloader';
+//import CircularProgress from '@mui/material/CircularProgress';
+
+/*const Loading = ()  => {
+    return (
+        <div style={{margin: "auto"}}>
+            <CircularProgress />
+        </div>
+    );
+}*/
 
 const ModuleItem = () => {
 
@@ -28,8 +38,13 @@ const ModuleItem = () => {
 
     const [count, setCount] = useState(0);
 
+    const [isLoading, setIsLoading] = useState(true);
+
+
     // Ref to the chat container for scrolling
     const chatContainerRef = useRef(null);
+
+    //const [loading, setLoading] = useState(false);
 
 
     const handleAskQuestion = async () => {
@@ -80,9 +95,15 @@ const ModuleItem = () => {
 
         if (chatContainerRef.current) {
             chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
-          }
+        }
 
         if(count === 0) {
+
+            setTimeout(() => {
+                setIsLoading(false);
+            }, 3000);
+
+           // setLoading(true);
             const request = fetchModuleItem();
             request.then((response) => {
                 if (response.status === 200) {
@@ -95,13 +116,19 @@ const ModuleItem = () => {
                                 if (data.status === true) {
                                     //console.log(data);
                                     setChat([...chat, {user: "IA", message: data.body_content}]);
+
+                                    /*setTimeout(() => {
+                                        setLoading(false);
+                                    }, 2000);*/
                                     //setHtml(data.body_content)
                                 } else {
+                                    //setLoading(false);
                                     console.log("Error");
                                 }
                             })
                     });
                 } else {
+                    //setLoading(false);
                     console.log("Error");
                 }
             });
@@ -208,6 +235,7 @@ const ModuleItem = () => {
                                                             );
                                                         }
                                                     })}
+                                                    {/*loading && <Loading/>*/}
                                                 </div>
 
                                                 <div className='prompt-input'>

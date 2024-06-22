@@ -15,18 +15,28 @@ import ModuleItems from '../components/ModuleItems';
 import ModuleList from '../helpers/ModuleList';
 import BoltIcon from '@mui/icons-material/Bolt';
 
+import Preloader from '../components/Preloader';
+
 
 function Homeuser() {
+
+
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (!sessionStorage.getItem('token')) {
       window.location.href = '/login';
     }
+    setTimeout(() => {
+			setLoading(false);
+		}, 2000);
   }, []);
 
 
   return (
     <>
+    {loading && <Preloader />}
+    {!loading && <>
       <div className="container-scroller">
         <NavBarDashboard />
         <div className="container-fluid page-body-wrapper">
@@ -80,6 +90,8 @@ function Homeuser() {
           </div>
         </div>
       </div>
+      </>
+			}
     </>
   )
 }

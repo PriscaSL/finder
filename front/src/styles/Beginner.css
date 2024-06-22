@@ -108,11 +108,11 @@
 }
 
 .mimgbeginner img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     position: absolute;
     right: 15em;
-    top: 0;
+    top: -1em;
 }
 
 #txtbeginner {
@@ -184,6 +184,10 @@
 
 .ia-text h1 {
     margin: 1em 0;
+}
+
+.ia-text h2, h3 {
+    margin: 0.5em 0;
 }
 
 .ia-text-footer div {

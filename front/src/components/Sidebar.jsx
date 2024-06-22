@@ -4,6 +4,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+import { Link } from 'react-router-dom';
 
 
 function Sidebar() {
@@ -11,28 +12,28 @@ function Sidebar() {
         <nav className="sidebar sidebar-offcanvas sidebar-icon-only" id="sidebar">
             <ul className="nav" style={{paddingTop: "60px"}}>
                 <li className="nav-item">
-                    <a className="nav-link" href="index.html">
+                    <Link className="nav-link" to="/homeuser">
                         <HomeIcon/>
                         <span className="menu-title">Home</span>
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="index.html">
+                    <Link className="nav-link" to="/beginner">
                         <MenuBookIcon/>
                         <span className="menu-title">Exercise</span>
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="index.html">
+                    <Link className="nav-link" to="/homeuser">
                         <SchoolIcon/>
                         <span className="menu-title">Course</span>
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="pages/documentation/documentation.html">
+                    <Link className="nav-link" to="/homeuser">
                         <WorkspacePremiumIcon/>
                         <span className="menu-title">Certificat</span>
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </nav>
