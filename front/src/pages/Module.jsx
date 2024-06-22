@@ -7,6 +7,8 @@ import Sidebar from '../components/Sidebar';
 import CheckIcon from '@mui/icons-material/Check';
 import SignalCellular1BarIcon from '@mui/icons-material/SignalCellular1Bar';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import checkDisabled from '../assets/Icon awesome-check-circle-2.png';
+import checkOk from "../assets/Icon awesome-check-circle-1.png";
 
 
 const Module = () => {
@@ -51,11 +53,11 @@ const Module = () => {
                                                         </div>
                                                         <div>
                                                             <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                                                            <CheckIcon className='mbg-gray'/>
+                                                            <img src={checkDisabled} className='check-img' alt="check" />
                                                         </div>
                                                         <div>
                                                             <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                                                            <CheckIcon className='mbg-gray'/>
+                                                            <img src={checkOk} className='check-img' alt="check" />
                                                         </div>
                                                     </div>
                                                 </div>
