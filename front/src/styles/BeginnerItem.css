@@ -4,6 +4,11 @@
     height: 14em;
     padding: 2em;
     width: 25rem;
+    cursor: pointer;
+}
+
+.begItem:hover{
+    background-color: #f3f3f3;
 }
 
 .iconback{

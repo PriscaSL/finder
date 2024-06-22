@@ -1,15 +1,48 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import '../styles/Beginner.css'
 import begin from '../assets/beginner.png'
 import SearchBar from '../components/SearchBar'
 import BeginnerItems from '../components/BeginnerItems'
-import BeginnerList from '../helpers/BeginnerList'
 import NavBarDashboard from '../components/NavDashboard';
 import Sidebar from '../components/Sidebar';
+import image1 from '../assets/Groupe 1.png'
 
 
 function Beginner() {
 
+  const MODULE_LIST_URL = "https://zahageek-back.onrender.com/api/glish/levels/";
+
+  useEffect(() => {
+    if (!sessionStorage.getItem('token')) {
+      window.location.href = '/login';
+    }
+
+    const request = fetchModuleList(1);
+    request.then((response) => {
+      if (response.status === 200) {
+        response.json().then((data) => {
+          setModuleList(data);
+        });
+      } else {
+        console.log("Error");
+      }
+    });
+  }, []);
+
+  const [ModuleList, setModuleList] = useState([]);
+
+  const fetchModuleList = async (level_id) => {
+    const myHeaders = new Headers();
+    const token = sessionStorage.getItem('token');
+    myHeaders.append("Authorization", "Bearer "+ token);
+
+    const requestOptions = {
+      method: "GET",
+      headers: myHeaders,
+      redirect: "follow"
+    };
+    return await fetch(MODULE_LIST_URL + level_id + "/modules", requestOptions);
+  }
 
   return (
     <>
@@ -44,13 +77,15 @@ function Beginner() {
                         </div>
                         <div className='bas'>
                           <div className='beginnerList'>
-                            {BeginnerList.map((beginnerItem, key) => {
+
+                            {ModuleList.map((module, key) => {
                               return (
                                 <BeginnerItems
                                   key={key}
-                                  imageb={beginnerItem.img}
-                                  titleb={beginnerItem.titl}
-                                  paragrapheb={beginnerItem.p}
+                                  imageb={image1}
+                                  titleb={module.name}
+                                  paragrapheb={module.desc}
+                                  module_id={module.id}
                                 />)
                             })}
                           </div>

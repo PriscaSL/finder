@@ -9,6 +9,7 @@ import Beginner from './pages/Beginner';
 import Module from './pages/Module';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ModuleItem from './pages/ModuleItem';
+import Quiz from './pages/Quiz';
 
 function App() {
 
@@ -24,8 +25,9 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/homeuser" element={<Homeuser />} />
           <Route path="/beginner" element={<Beginner />} />
-          <Route path="/module" element={<Module />} />
-          <Route path="/module-item" element={<ModuleItem />} />
+          <Route path="/module/:id" element={<Module />} />
+          <Route path="/module-item/:id" element={<ModuleItem />} />
+          <Route path="/quiz" element={<Quiz />} />
         </Routes>
       </div>
     </Router>

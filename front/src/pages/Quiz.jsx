@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react'
+import React from 'react'
 import '../styles/Beginner.css'
 import Sary from '../assets/sary.png';
 import NavBarDashboard from '../components/NavDashboard';
@@ -11,76 +11,8 @@ import IconGlish from '../assets/ICONE GLISH.png';
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import Rakoto from '../assets/rakoto.jpg';
-import { useParams } from 'react-router-dom';
 
-
-const ModuleItem = () => {
-
-    const { id } = useParams();
-
-    const [moduleItem, setModuleItem] = useState({});
-
-    const [html, setHtml] = useState("");
-
-    useEffect(() => {
-        if (!sessionStorage.getItem('token')) {
-            window.location.href = '/login';
-        }
-
-        const request = fetchModuleItem();
-        request.then((response) => {
-            if (response.status === 200) {
-                response.json().then((data) => {
-                    setModuleItem(data);
-                    // get lessons from prompt
-                    const req_lessons = fetchLessons(data.name);
-                    req_lessons.then((response) => response.json())
-                    .then((data) => {
-                        if (data.status === true) {
-                            console.log(data);
-                        } else {
-                            console.log("Error");
-                        }
-                    })
-                });
-            } else {
-                console.log("Error");
-            }
-        });
-    }, []);
-
-
-    const MODULE_URL = "https://zahageek-back.onrender.com/api/glish/levels/modules/module_elements/" + id;
-
-
-    const fetchModuleItem = async () => {
-        const myHeaders = new Headers();
-        const token = sessionStorage.getItem('token');
-        myHeaders.append("Authorization", "Bearer " + token);
-
-        const requestOptions = {
-            method: "GET",
-            headers: myHeaders,
-            redirect: "follow"
-        };
-        return await fetch(MODULE_URL, requestOptions);
-    }
-    
-    const LECON_URL = "https://zahageek-back.onrender.com/api/glish/lessons?prompt=";
-
-    const fetchLessons = async (prompt) => {
-        const myHeaders = new Headers();
-        const token = sessionStorage.getItem('token');
-        myHeaders.append("Authorization", "Bearer " + token);
-
-        const requestOptions = {
-            method: "GET",
-            headers: myHeaders,
-            redirect: "follow"
-        };
-        return await fetch(LECON_URL + prompt, requestOptions);
-    }
-
+const Quiz = ({ module }) => {
     return (
         <>
             <div className="container-scroller">
@@ -97,14 +29,15 @@ const ModuleItem = () => {
                                                 <div className='haut-perso'>
                                                     <div className='textbeginner'>
                                                         <div className='textcontenu'>
-                                                            <p id='titrebeginner'>{moduleItem && moduleItem.order} - {moduleItem && moduleItem.name}</p>
-                                                            <p id='txtbeginner'>{moduleItem && moduleItem.desc}</p>
+                                                            <p id='titrebeginner'>Quiz : Introduction to English</p>
+                                                            <p id='txtbeginner'>
+                                                            Try to answer questions via prompt or voice recognition.</p>
                                                             <div className='mheader'>
                                                                 <div><SignalCellular1BarIcon style={{ marginRight: "0.5em" }} /> Beginner</div>
-                                                                <div><PlayArrowIcon style={{ marginRight: "0.5em" }} /> 3 Lessons</div>
+                                                                <div><PlayArrowIcon style={{ marginRight: "0.5em" }} /> 03 Lessons</div>
                                                             </div>
                                                             <div className='mtitle'>
-                                                                <h3>Start Quiz +75 px</h3>
+                                                                <h3>Continue Learning</h3>
                                                             </div>
                                                         </div>
                                                         <div id='linebeg' > <hr /></div>
@@ -146,7 +79,7 @@ const ModuleItem = () => {
 
                                                 <div className='prompt-input'>
                                                     <KeyboardVoiceIcon />
-                                                    <input type='text' className='prompti' placeholder='Type your answer here' />
+                                                    <input type='text' className='prompti' placeholder='Type your answer here or answer by speech recognition' />
                                                     <ArrowCircleUpIcon />
                                                 </div>
                                             </div>
@@ -163,4 +96,4 @@ const ModuleItem = () => {
 }
 
 
-export default ModuleItem;
+export default Quiz;

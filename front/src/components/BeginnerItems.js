@@ -1,11 +1,14 @@
 import React from 'react'
 import '../styles/BeginnerItem.css'
 
-function BeginnerItems({imageb, titleb, paragrapheb}) {
-    return (
+function BeginnerItems({imageb, titleb, paragrapheb, module_id}) {
+  
+  const URL = "/module/"+ module_id;
+  
+  return (
 
     
-    <div className='begItem'>
+    <div className='begItem' onClick={(e) => window.location.href = URL}>
         <div className='begcontent'>
         <div className='iconback'>
            <p id='begicimg' ><img src={imageb} alt='ttt'/></p>

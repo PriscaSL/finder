@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import "../styles/Homeuser.css";
 import "../styles/dashboard/feather/feather.css";
@@ -18,12 +18,12 @@ import BoltIcon from '@mui/icons-material/Bolt';
 
 function Homeuser() {
 
-
   useEffect(() => {
     if (!sessionStorage.getItem('token')) {
       window.location.href = '/login';
     }
   }, []);
+
 
   return (
     <>
@@ -54,7 +54,7 @@ function Homeuser() {
                           <div className='foothomeuser'>
                             <div className='foothome-navigation'>
                               <h1 className='letslearn'>Let's learn and practice  <i><ArrowForwardIcon /></i></h1>
-                              <button id='getstart'>Get Started for Free </button>
+                              <button id='getstart' onClick={(e) => window.location.href="/beginner"}>Start For Free </button>
                             </div>
                             <div className='moduleList'>
                               {ModuleList.map((moduleItem, key) => {
