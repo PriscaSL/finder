@@ -108,11 +108,15 @@
 }
 
 .mimgbeginner img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     position: absolute;
-    right: 10em;
-    top: -1.8rem;
+    right: 15em;
+    top: 0;
+}
+
+#txtbeginner {
+    max-width: 60%;
 }
 
 .btn-start {

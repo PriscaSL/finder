@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/Beginner.css'
-import Group1 from '../assets/Groupe 1.png';
+import Sary from '../assets/sary.png';
 import SearchBar from '../components/SearchBar'
 import NavBarDashboard from '../components/NavDashboard';
 import Sidebar from '../components/Sidebar';
@@ -40,7 +40,7 @@ const Module = () => {
                                                         <div id='linebeg' > <hr /></div>
                                                     </div>
                                                     <div className='mimgbeginner'>
-                                                        <img src={Group1} alt='begin' />
+                                                        <img src={Sary} alt='begin' />
                                                     </div>
                                                 </div>
                                                 <div className='bas'>
