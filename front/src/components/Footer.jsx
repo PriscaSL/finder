@@ -15,7 +15,7 @@ function Footer() {
             <div className="footer-row fotter-row-grid footer-title">
                 <div>Usefull Links</div>
                 <div>Contact Us</div>
-                <div>Whatch Videos</div>
+                <div>Watch Videos</div>
             </div>
             <div className="footer-row fotter-row-grid">
                 <div>
@@ -26,10 +26,10 @@ function Footer() {
                     </ul>
                 </div>
                 <div>
-                    <div className="footer-contact">RAHARIJESY Safidy</div>
+                    <div className="footer-contact">Glish Assistant Service</div>
                     <div className="footer-contact">
                         +261 32 87 234 23<br/>
-                        raharijesysafidy@gmail.com
+                        glish@gmail.com
                     </div>
                 </div>
                 <div className="footer-image-container">
