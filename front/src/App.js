@@ -6,6 +6,7 @@ import Whyus from './pages/Whyus';
 import Services from './pages/Services'; 
 import Homeuser from './pages/Homeuser';
 import Beginner from './pages/Beginner';
+import Module from './pages/Module';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/homeuser" element={<Homeuser />} />
           <Route path="/beginner" element={<Beginner />} />
+          <Route path="/module" element={<Module />} />
         </Routes>
       </div>
     </Router>

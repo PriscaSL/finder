@@ -49,8 +49,7 @@
 }
 
 .bas{
-    top: 3rem;
-    padding-right: 100rem;
+    top: 2rem;
     position: relative;
 }
 .beginnerList{
@@ -59,4 +58,67 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3.4rem;
     bottom:.5rem;
+}
+
+
+.mheader {
+    display: flex;
+    justify-content: start;
+    gap: 3em;
+    align-items: center;
+    margin-top: 2em;
+    margin: 1em 0;
+}
+
+.mtitle {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    margin: 1em 0;
+    background-color: #f6f686;
+    padding: 0.4em 0;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.sous-module-list {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.sous-module-list div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2em;
+    border: 2px solid var(--black-color);
+    border-radius: 10px;
+    height: 6em;
+}
+
+.mbg-gray {
+    color: #fff !important;
+    background-color: #343434;
+    border-radius: 50%;
+    padding: 3px;
+    font-weight: 600 !important;
+}
+
+.mimgbeginner img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 10em;
+    top: -1.8rem;
+}
+
+.btn-start {
+    width: 100px;
+    padding: 0.8em 0;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--black-color);
 }
